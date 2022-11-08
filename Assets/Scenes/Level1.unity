@@ -6559,8 +6559,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72562f8d5ced44f268e191c04c3d1694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 855239691}
-  _continueButton: {fileID: 2028728957}
+  player: {fileID: 855239691}
+  continueButton: {fileID: 2028728957}
   gameOverText: {fileID: 1855182400}
   scoreSystem: {fileID: 1630933865}
   gameOverDisplay: {fileID: 1164852386}
