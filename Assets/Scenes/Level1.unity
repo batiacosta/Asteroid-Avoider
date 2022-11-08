@@ -925,6 +925,7 @@ MonoBehaviour:
     type: 3}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
 --- !u!1 &827405279
 GameObject:
   m_ObjectHideFlags: 0
@@ -6558,6 +6559,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72562f8d5ced44f268e191c04c3d1694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 855239691}
+  _continueButton: {fileID: 2028728957}
   gameOverText: {fileID: 1855182400}
   scoreSystem: {fileID: 1630933865}
   gameOverDisplay: {fileID: 1164852386}
@@ -6977,13 +6980,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1538578843}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1538578844}
+        m_TargetAssemblyTypeName: GameOverHandler, Assembly-CSharp
+        m_MethodName: Continue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
