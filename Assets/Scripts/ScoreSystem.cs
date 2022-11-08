@@ -34,4 +34,9 @@ public class ScoreSystem : MonoBehaviour
         _score = 0f;
         
     }
+
+    public void StartTimer()
+    {
+        ShouldCountScore = true;
+    }
 }

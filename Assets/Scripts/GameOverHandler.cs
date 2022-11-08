@@ -1,12 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameOverHandler : MonoBehaviour
 {
-
+    [SerializeField] private GameObject player;
+    [SerializeField] private Button continueButton;
     [SerializeField] private TextMeshProUGUI gameOverText;
     [SerializeField] private ScoreSystem scoreSystem;
     [SerializeField] private GameObject gameOverDisplay;
@@ -27,5 +28,23 @@ public class GameOverHandler : MonoBehaviour
     public void ReturnToMenu()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void Continue()
+    {
+        AdManager.Instance.ShowAd(this);
+        continueButton.interactable = false;
+    }
+    public void ContinueGame()
+    {
+        scoreSystem.StartTimer();
+
+        asteroidSpawner.enabled = true;
+        
+        gameOverDisplay.gameObject.SetActive(false);
+        
+        player.transform.position = Vector3.zero;
+        player.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        player.gameObject.SetActive(true);
     }
 }
